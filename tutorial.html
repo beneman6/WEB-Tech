@@ -1,65 +1,77 @@
 <!DOCTYPE html>
-<html lang =de>
-    <head>
-        <meta charset="utf-8">
-        <title>WEB Tutorials</title>
-        <link rel="icon" type="images/x-icon" href="assets/html.svg">
+<html lang=de>
 
-    </head>
+<head>
+    <meta charset="utf-8">
+    <title>WEB Tutorials</title>
+    <link rel="icon" type="images/x-icon" href="assets/img/html.svg">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
 
-    <body>
-        <header>
-            <img width="50" height="50" src="assets/html.svg" alt="Webseiten Logo">
-            <h1>Web Entwicklung</h1>
+<body>
+    <header>
+        <img width="50" height="50" src="assets/img/html.svg" alt="Webseiten Logo">
+        <h1>Web Entwicklung</h1>
 
-        </header>
-        
-        <nav><a href="list.html">Liste der Kategorien</a> | <a href="tutorials.html">Tutorials der Kategorie X</a> | <a href="tutorial.html"> Detaills zum Tutorial Y</a> | <a href="form.html">Erstellen eines neuen Tutorials</a></nav>
-        <figure><img width="50" height="50" src="assets/nodejs.svg"><figcaption>Node.js Logo</figcaption></figure>
-        
-        <p>
-        <video src="assets/Was ist Node.js.mp4" width="500" controls>Ihr Browser unterstützt dieses Format nicht</video>
-        </p>
-        <table>
-            <tbody>
-            <tr>
-                <th>Kapitel</th>
-                <th>Kurzbeschreibung</th>
-                <th>Dauer</th>
-            </tr>
-            <tr>
-                <td>Einleitung</td>
-                <td>Eine kurze Einleitung zu Node.js</td>
-                <td>1:30 Min.</td>
-            </tr>
-            <tr>
-                <td>Bestandtteile</td>
-                <td>Die auflistung der Bestandtteile von Node.js durch den Vortragenden</td>
-                <td>2 Min.</td>
-            </tr>
-            <tr>
-                <td>Outro</td>
-                <td>Das Outro</td>
-                <td>1:15 Min.</td>
-            </tr>
-            </tbody>
-            <tfoot>
-                <td colspan="2"> </td>
-                <td> 4:45 Min</td>
-            </tfoot>
-            
-            
+    </header>
+    <main>
 
-        </table>
-        <p>
-        Datum: 27.04.2023
-        </p>
-        <h2>Neue Tutorials</h2>
-        <ul>
-            <li>Node.js Schnelleinstieg 27.04.2023 - Dauer: 2:30h</li>
-            <li>HTML-5 Grundlagen 23.04.2023 - Dauer: 1:20h</li>
-        </ul>
-        <footer>@ by WebTech.inc</footer>
-    </body>
-    
+        <nav><a href="list.html">Liste der Kategorien</a> | <a href="tutorials.html">Tutorials der Kategorie X</a> | <a
+                href="tutorial.html"> Detaills zum Tutorial Y</a> | <a href="form.html">Erstellen eines neuen
+                Tutorials</a></nav>
+        <figure><img width="50" height="50" src="assets/img/nodejs.svg">
+            <figcaption>Node.js Logo</figcaption>
+        </figure>
+        <article id="nodeJSTutorialVideo">
+            <p>
+                <video src="assets/vid/Was ist Node.js.mp4" width="500" controls>Ihr Browser unterstützt dieses Format
+                    nicht</video>
+            </p>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Kapitel</th>
+                        <th>Kurzbeschreibung</th>
+                        <th>Dauer</th>
+                    </tr>
+                    <tr>
+                        <td>Einleitung</td>
+                        <td>Eine kurze Einleitung zu Node.js</td>
+                        <td>1:30 Min.</td>
+                    </tr>
+                    <tr>
+                        <td>Bestandtteile</td>
+                        <td>Die auflistung der Bestandtteile von Node.js durch den Vortragenden</td>
+                        <td>2 Min.</td>
+                    </tr>
+                    <tr>
+                        <td>Outro</td>
+                        <td>Das Outro</td>
+                        <td>1:15 Min.</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <td colspan="2"> </td>
+                    <td> 4:45 Min</td>
+                </tfoot>
+
+
+
+            </table>
+            <p>
+                Datum: 27.04.2023
+            </p>
+        </article>
+        <article class="newTutorials">
+            <h2>Neue Tutorials</h2>
+            <ul>
+                <li>Node.js Schnelleinstieg 27.04.2023 - Dauer: 2:30h</li>
+                <li>HTML-5 Grundlagen 23.04.2023 - Dauer: 1:20h</li>
+            </ul>
+        </article>
+    </main>
+
+    <footer>@ by WebTech.inc</footer>
+</body>
+
 </html>

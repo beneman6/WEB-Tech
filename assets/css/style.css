@@ -1,0 +1,8 @@
+h1 { background-color: aqua;}
+h2 { background-color: azure;}
+h2.linear1 {background: linear-gradient(to bottom right, white, orange);}
+
+
+.newTutorials { background-color: peachpuff}
+
+nav a:hover { background-color: cornflowerblue;}
