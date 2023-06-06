@@ -1,0 +1,14 @@
+
+
+input:invalid{
+    border-color: crimson;
+}
+input[type ="submit"]{
+    background-color: bisque;
+    border-radius: 5px;
+}
+legend{
+    background-color: darkgray;
+    
+    border-top: 5px; border-bottom: 5px;
+}
