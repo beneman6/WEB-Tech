@@ -1,0 +1,23 @@
+#tutorialList{
+
+    display: flex;
+    flex-direction: column-reverse;
+    flex-grow: 4;
+    flex-basis: 200px;
+    flex-shrink: 1;
+
+}
+#tutorialListPage{
+    display: flex;
+
+}
+#orderedList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+}
+#orderedList p {
+    
+    
+}

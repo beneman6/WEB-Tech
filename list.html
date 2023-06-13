@@ -7,7 +7,6 @@
     <link rel="icon" type="images/x-icon" href="assets/img/html.svg">
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/form.css">
-    <link rel="stylesheet" href="/assets/css/flexbox.css">
     <link rel="stylesheet" href="/assets/css/tile.css">
 
 
@@ -26,26 +25,28 @@
                 Tutorials</a></nav>
         <div id = "tutorialListPage">
         <article id="tutorialList">
-            <ol>
-                <li><a href="tutorials.html">Web Entwicklung<img width="50" height="50" alt="HTML Symbol"
+            <article id="orderedList">
+                <p><a href="tutorials.html">Web Entwicklung<img width="50" height="50" alt="HTML Symbol"
                             src="assets/img/html.svg"></a>
 
-                </li>
-                <li><a href="tutorials.html">CSS<img width="50" height="50" alt="CSS Symbol"
+                </p>
+                <p><a href="tutorials.html">CSS<img width="50" height="50" alt="CSS Symbol"
                             src="assets/img/css.svg"></a>
 
-                </li>
-                <li><a href="tutorials.html">Java Script<img width="50" height="50" alt="javascript Symbol"
+                </p>
+                <p><a href="tutorials.html">Java Script<img width="50" height="50" alt="javascript Symbol"
                             src="assets/img/javascript.png"></a>
 
-                </li>
-            </ol>
+                </p>
+                <p><a href=""> Noch eine Kategorie <img width="50" height="50" alt="javascript Symbol"
+                    src="assets/img/javascript.png"></a></p>
+                </article>
             <form action="https://labs.inf.fh-dortmund.de/tutorialService/testTutorialSearch.php" method="get">
 
                 <fieldset>
                     <p> <label for="titel">Titel: </label><input id="titel" name="search" required minlength="4"
-                            maxlength="20" placeholder="tutorial" pattern="[A-Z]\w*"></p>
-                    <p><input type="submit" value="Suchen"></p>
+                            maxlength="20" placeholder="tutorial" pattern="[A-Z]\w*">
+                    <input type="submit" value="Suchen"></p>
                 </fieldset>
             </form>
         </article>
