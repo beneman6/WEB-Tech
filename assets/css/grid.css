@@ -1,0 +1,22 @@
+body{
+
+    display: grid;
+    grid-template-areas:"kopf"
+                        "nav"
+                        "main"
+                        "footer";
+                        
+    
+}
+header { grid-area: kopf;}
+nav { grid-area: nav;}
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-areas: "inhalt zusatz";
+    grid-template-columns: 80% 20%;
+}
+#tutorialList { grid-area: inhalt;}
+#formular{ grid-area: inhalt;}
+.newTutorials { grid-area: zusatz;}
+footer { grid-area: footer;}

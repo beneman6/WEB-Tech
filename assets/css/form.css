@@ -1,14 +1,41 @@
 
+input {
+    
+    border: 1px black;
+    border-bottom-style: solid;
 
-input:invalid{
-    border-color: crimson;
 }
 input[type ="submit"]{
     background-color: bisque;
-    border-radius: 5px;
+    border-radius: 3px;
+    border: solid 2px chocolate;
 }
-legend{
-    background-color: darkgray;
+input:invalid{
+    background-color: rgba(248, 78, 78, 0.192);
+}
+input:required{
     
-    border-top: 5px; border-bottom: 5px;
+    border-left: 2px solid;
 }
+
+
+legend{
+    padding: 5px;
+    background-color: darksalmon;
+    border-radius: 5px;
+    border: black 2px solid;
+    border-left-style: hidden; border-right-style: hidden;
+}
+
+form p{
+    margin-right: 10px;
+}
+fieldset{
+    padding-bottom: 0px;
+    border: 1px hidden;
+    border-top-style: solid;
+}
+.inputSpan::after{
+    content: "(Erforderliches Feld)";
+}
+/*Das ist so noch nicht fertig*/

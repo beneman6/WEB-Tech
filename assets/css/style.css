@@ -1,4 +1,4 @@
-h1 { background-color: aqua;}
+h1 { background-color: aqua; padding-left:  60px;}
 h2 { background-color: azure;}
 h2.linear1 {background: linear-gradient(to bottom right, white, orange);}
 
@@ -6,3 +6,34 @@ h2.linear1 {background: linear-gradient(to bottom right, white, orange);}
 .newTutorials { background-color: peachpuff}
 
 nav a:hover { background-color: cornflowerblue;}
+nav a[href]{
+    margin-left: 10px; margin-right: 10px;
+}
+nav{ 
+    margin-top: 10px; margin-bottom: 20px;
+    padding: 5px;
+}
+nav a{
+    padding: 3px;
+    border: 2px solid dodgerblue;
+    border-radius: 3px;
+    box-shadow: 4px 4px 4px grey;
+}
+footer{
+
+    position: sticky;
+    bottom: 10px;
+}
+*{ 
+    font-family: Helvetica;
+}
+.tutorialPics{
+    float: left;
+}
+#nodeJSPic{
+    float: right;
+}
+.mainLogo{
+
+    float: left;
+}

@@ -6,11 +6,12 @@
     <title>WEB Tutorials</title>
     <link rel="icon" type="images/x-icon" href="assets/img/html.svg">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/flexbox.css">
 </head>
 
 <body>
     <header>
-        <img width="50" height="50" src="assets/img/html.svg" alt="Webseiten Logo">
+        <img class="mainLogo" width="50" height="50" src="assets/img/html.svg" alt="Webseiten Logo">
         <h1>Web Entwicklung</h1>
 
     </header>
@@ -19,14 +20,27 @@
         <nav><a href="list.html">Liste der Kategorien</a> | <a href="tutorials.html">Tutorials der Kategorie X</a> | <a
                 href="tutorial.html"> Detaills zum Tutorial Y</a> | <a href="form.html">Erstellen eines neuen
                 Tutorials</a></nav>
-        <figure><img width="50" height="50" src="assets/img/nodejs.svg">
-            <figcaption>Node.js Logo</figcaption>
-        </figure>
+        
+                
+        <h2>Node.js Tutorial</h2>
+        <div class="tutorialDetails">
+        
+        
         <article id="nodeJSTutorialVideo">
+            <div class="tutorialHead">
+            <p calss="tutorialInfos">
+                Datum: 27.04.2023 Dauer: 4:45
+            </p>
+            <figure id="nodeJSPic"><img width="50" height="50" src="assets/img/nodejs.svg">
+                <figcaption>Node.js Logo</figcaption>
+            </figure>
+            </div>
+            <div class="videoClass">
             <p>
                 <video src="assets/vid/Was ist Node.js.mp4" width="500" controls>Ihr Browser unterstützt dieses Format
                     nicht</video>
             </p>
+            
             <table>
                 <tbody>
                     <tr>
@@ -58,9 +72,7 @@
 
 
             </table>
-            <p>
-                Datum: 27.04.2023
-            </p>
+            </div>
         </article>
         <article class="newTutorials">
             <h2>Neue Tutorials</h2>
@@ -69,6 +81,7 @@
                 <li>HTML-5 Grundlagen 23.04.2023 - Dauer: 1:20h</li>
             </ul>
         </article>
+    </div>
     </main>
 
     <footer>@ by WebTech.inc</footer>

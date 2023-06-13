@@ -6,41 +6,44 @@
     <title>WEB Tutorials</title>
     <link rel="icon" type="images/x-icon" href="assets/img/html.svg">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/grid.css">
 </head>
 
 <body>
+    <div class= "maincontainer">
     <header>
-        <img width="50" height="50" src="assets/img/html.svg" alt="Webseiten Logo">
+        <img class="mainLogo" width="50" height="50" src="assets/img/html.svg" alt="Webseiten Logo">
         <h1>Web Entwicklung</h1>
 
 
     </header>
-
-    <nav><a href="list.html">Liste der Kategorien</a> | <a href="tutorials.html">Tutorials der Kategorie X</a> | <a
+    
+    <nav><a href="list.html">Liste der <strong> Kategorien</strong></a> | <a href="tutorials.html">Tutorials der Kategorie X</a> | <a
             href="tutorial.html"> Detaills zum Tutorial Y</a> | <a href="form.html">Erstellen eines neuen Tutorials</a>
     </nav>
     <main>
+        
         <article id="tutorialList">
+            <h2>Liste der Tutorials</h2>
+            <figure class="tutorialPics">
+                <img  width="50" height="50" src="assets/img/nodejs.svg">
+                
+            </figure>
             <ul>
                 <li><a href="tutorial.html">Node.js Schnelleinstieg</a>
-                    <figure>
-                        <img width="50" height="50" src="assets/img/nodejs.svg">
-                        <figcaption>Das Node.js Logo</figcaption>
-                    </figure>
+                    
                 </li>
                 <li>27.04.2023</li>
                 <li>Dauer: 2:30h</li>
                 <li>Ein Tutorial über den Schnelleinstieg in Node.js</li>
             </ul>
 
-
+            <figure class="tutorialPics">
+                <img width="50"  height="50" src="assets/img/html.svg">
+                
+            </figure>
             <ul>
-                <li><a href="">HTML-5 Grundlagen</a>
-                    <figure>
-                        <img width="50" height="50" src="assets/img/html.svg">
-                        <figcaption>Das HTML-5 Logo</figcaption>
-                    </figure>
-                </li>
+                <li><a href="">HTML-5 Grundlagen</a></li>
                 <li>23.04.2023</li>
                 <li>Dauer: 1:20h</li>
                 <li>Alle wichtigen HTML-5 Elemente</li>
@@ -54,7 +57,7 @@
             </ul>
         </article>
     </main>
-    <footer>@ by WebTech.inc</footer>
+    <footer>@ by WebTech.inc</footer></div>
 </body>
 
 </html>

@@ -6,29 +6,33 @@
     <title>WEB Tutorials</title>
     <link rel="icon" type="images/x-icon" href="assets/img/html.svg">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/form.css">
+    <link rel="stylesheet" href="/assets/css/grid.css">
 
 </head>
 
 <body>
+    
     <header>
 
-        <img width="50" height="50" src="assets/img/html.svg" alt="Webseiten Logo">
+        <img class="mainLogo" width="50" height="50" src="assets/img/html.svg" alt="Webseiten Logo">
         <h1>Web Entwicklung</h1>
 
     </header>
-
+    <nav><a href="list.html">Liste der Kategorien</a> | <a href="tutorials.html">Tutorials der Kategorie X</a> | <a
+        href="tutorial.html"> Detaills zum Tutorial Y</a> | <a href="form.html">Erstellen eines neuen
+        Tutorials</a></nav>
     <main>
 
-        <nav><a href="list.html">Liste der Kategorien</a> | <a href="tutorials.html">Tutorials der Kategorie X</a> | <a
-                href="tutorial.html"> Detaills zum Tutorial Y</a> | <a href="form.html">Erstellen eines neuen
-                Tutorials</a></nav>
+        
+        <div id="formular">       
         <h2>Erstellen eines neuen Tutorials</h2>
         <form method="post" action="https://labs.inf.fh-dortmund.de/tutorialService/testCreateTutorial.php">
             <fieldset>
-                <legend>Daten</legend>
+                <legend>Daten </legend>
                 <p><label for="titel">Titel</label>
-                    <input placeholder="Titel mit min. 4 Zeichen und Großbuchstaben" name="name" id="titel" required
-                        minlength="4" maxlength="20" pattern="[A-Z][a-z]*">
+                    <span class="inputSpan"> <input placeholder="Titel mit min. 4 Zeichen und Großbuchstaben" name="name" id="titel" required
+                        minlength="4" maxlength="20" pattern="[A-Z][a-z]*"></span>
                 </p>
                 <p>Sprache
 
@@ -58,7 +62,7 @@
                 </p>
                 <p>
                     <label for="dauer">Dauer</label>
-                    <input id="dauer" name="duration" type="time" min="00:00" max="15:59">
+                    <input id="dauer" required name="duration" type="time" min="00:00" max="15:59">
                 </p>
                 <p>
                     <label for="veröffentlichung">Veröffentlichung (Datum)</label>
@@ -79,12 +83,13 @@
 
                 <p><input type="submit"></p>
             </fieldset>
+        </form></div>
+        <article class="newTutorials">
             <h2>Neue Tutorials</h2>
             <ul>
                 <li>Node.js Schnelleinstieg 27.04.2023 - Dauer: 2:30h</li>
                 <li>HTML-5 Grundlagen 23.04.2023 - Dauer: 1:20h</li>
-            </ul>
-        </form>
+            </ul></article>
     </main>
     <footer>@ by WebTech.inc</footer>
 

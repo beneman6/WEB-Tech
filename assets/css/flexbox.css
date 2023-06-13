@@ -1,0 +1,56 @@
+#tutorialList{
+
+    display: flex;
+    flex-direction: column-reverse;
+    flex-grow: 4;
+    flex-basis: 200px;
+    flex-shrink: 1;
+
+}
+.newTutorials{
+    
+    flex-direction: row;
+    flex-grow: 1;
+    flex-basis: 50px;
+    flex-shrink: 2;
+
+}
+#tutorialListPage{
+    display: flex;
+
+}
+.tutorialDetails{
+    display: flex;
+    flex-direction: row;
+    
+}
+#nodeJSTutorialVideo{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 4;
+    flex-shrink: 1;
+    flex-basis: 200px;
+    
+}
+.tutorialInfos{
+    flex-grow: 2;
+    flex-shrink: 1;
+    flex-basis: 100px;
+}
+#nodeJSPic{
+    flex-grow: 1;
+    flex-shrink: 2;
+    flex-basis: 50px;
+}
+.videoClass{
+    flex-grow: 4;
+    flex-shrink: 1;
+    flex-basis: 200px;
+}
+.tutorialHead{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 4;
+    flex-shrink: 1;
+    
+}
