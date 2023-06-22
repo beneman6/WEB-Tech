@@ -3,6 +3,21 @@ h2 { background-color: azure;}
 h2.linear1 {background: linear-gradient(to bottom right, white, orange);}
 
 
-.newTutorials { background-color: peachpuff}
+.newTutorials {
+    
+    background-color: peachpuff
+}
 
-nav a:hover { background-color: cornflowerblue;}
+nav a:hover { 
+    background-color: cornflowerblue;
+
+}
+.tutorialVideoTable tbody tr:nth-of-type(odd){
+    background-color: azure;
+    
+}
+.tutorialVideoTable thead,tfoot{
+
+    background-color: aqua;
+}
+
