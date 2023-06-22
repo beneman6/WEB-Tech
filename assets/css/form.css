@@ -35,7 +35,7 @@ fieldset{
     border: 1px hidden;
     border-top-style: solid;
 }
-.inputSpan::after{
+label:has(> input:required)::after{
     content: "(Erforderliches Feld)";
 }
 /*Das ist so noch nicht fertig*/

@@ -30,11 +30,11 @@
         <form method="post" action="https://labs.inf.fh-dortmund.de/tutorialService/testCreateTutorial.php">
             <fieldset>
                 <legend>Daten </legend>
-                <p><label for="titel">Titel</label>
-                    <span class="inputSpan"> <input placeholder="Titel mit min. 4 Zeichen und Großbuchstaben" name="name" id="titel" required
-                        minlength="4" maxlength="20" pattern="[A-Z][a-z]*"></span>
+                <p><label for="titel">Titel
+                    <input placeholder="Titel mit min. 4 Zeichen und Großbuchstaben" name="name" id="titel" required
+                        minlength="4" maxlength="20" pattern="[A-Z][a-z]*"></label>
                 </p>
-                <p>Sprache
+                <p>Sprache<label for="sprache">
 
                     <select name="language" id="sprache">
                         <option value="-" id="keine">-</option>
@@ -42,13 +42,13 @@
                         <option value="en" id="englisch">Englisch </option>
                         <option value="es" id="spanisch">Spanisch </option>
                         <option value="fr" id="französisch">Französisch </option>
-                    </select>
+                    </select></label>
                 </p>
 
                 <p>
-                    <label for="kategorien">Kategorie(n)</label>
+                    <label for="kategorien">Kategorie(n)
                     <input type="text" id="kategorien" placeholder="Kategorien getrennt durch Kommta" name="categories"
-                        pattern="\w+([,] \w+)*">
+                        pattern="\w+([,] \w+)*"></label>
 
                 </p>
             </fieldset>
@@ -56,27 +56,27 @@
                 <legend>Zusammenfassung</legend>
                 <p>
 
-                    <label for="beschreibung">Beschreibung</label>
+                    <label for="beschreibung">Beschreibung
                     <textarea id="beschreibung" placeholder="Beschreibungstext" name="description" minlength="40"
-                        cols="60" rows="4"></textarea>
+                        cols="60" rows="4"></textarea></label>
                 </p>
                 <p>
-                    <label for="dauer">Dauer</label>
+                    <label for="dauer">Dauer
                     <input id="dauer" required name="duration" type="time" min="00:00" max="15:59">
-                </p>
+                </label></p>
                 <p>
-                    <label for="veröffentlichung">Veröffentlichung (Datum)</label>
-                    <input id="veröffentlichung" name="date" type="date" required>
+                    <label for="veröffentlichung">Veröffentlichung (Datum)
+                    <input id="veröffentlichung" name="date" type="date" required></label>
                 </p>
             </fieldset>
             <fieldset>
                 <legend>Inhalt</legend>
 
                 <p>
-                    <label for="inhalt"> Inhalt</label>
+                    <label for="inhalt"> Inhalt
                     <input type="radio" value="text" name="type" required id="text"><label for="text"> Text</label>
                     <input type="radio" value="video" name="type" required id="video"> <label for="video"> Video</label>
-                </p>
+                </label></p>
                 <p>
                     <input required name="content" placeholder="Der Inhalt des Tutorials" id="inhalt">
                 </p>
