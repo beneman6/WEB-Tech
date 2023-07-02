@@ -18,6 +18,7 @@ nav a{
     border: 2px solid dodgerblue;
     border-radius: 3px;
     box-shadow: 4px 4px 4px grey;
+    
 }
 footer{
 
@@ -38,3 +39,21 @@ footer{
 
     float: left;
 }
+@media screen and (max-width:768px) {
+
+    h1{
+        font-size: medium;
+    }
+}
+@media screen and (max-width:480px) {
+
+    h1{
+        visibility: hidden;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+
+    }
+}
+

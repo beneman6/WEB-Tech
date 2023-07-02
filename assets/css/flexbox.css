@@ -27,7 +27,7 @@
 #nodeJSTutorialVideo{
     display: flex;
     flex-direction: column;
-    flex-grow: 4;
+    flex-grow: 8;
     flex-shrink: 1;
     flex-basis: 200px;
     
@@ -53,4 +53,11 @@
     flex-grow: 4;
     flex-shrink: 1;
     
+}
+@media screen and (max-width:768px) {
+    .tutorialDetails{
+        
+        flex-direction: column;
+        
+    }
 }
