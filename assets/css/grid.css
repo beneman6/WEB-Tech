@@ -26,6 +26,10 @@ footer { grid-area: footer;}
         grid-template-areas: "inhalt" 
                              "zusatz";
         grid-template-rows: 80% 20%;
+        
+    }
+    .newTutorials{
+        padding-top: 30px;
     }
     
 }

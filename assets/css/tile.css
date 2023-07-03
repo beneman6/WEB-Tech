@@ -9,6 +9,7 @@
 }
 #tutorialListPage{
     display: flex;
+    flex-direction: row;
 
 }
 #orderedList{
@@ -41,6 +42,13 @@
     
     
     
+}
+@media screen and (max-width:768px) {
+    #tutorialListPage{
+        
+        flex-direction: column;
+        
+    }
 }
 
 

@@ -10,14 +10,24 @@ nav a[href]{
     margin-left: 10px; margin-right: 10px;
 }
 nav{ 
-    margin-top: 10px; margin-bottom: 20px;
+    margin-top: 10px; margin-bottom: 5px;
     padding: 5px;
+    border: 2px solid rgb(101, 165, 230);
+    border-radius: 10px;
+    background-color: rgb(185, 202, 233);
+
 }
 nav a{
+    display: inline-block;
     padding: 3px;
     border: 2px solid dodgerblue;
     border-radius: 3px;
     box-shadow: 4px 4px 4px grey;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    
+    
     
 }
 footer{
@@ -43,17 +53,8 @@ footer{
 
     h1{
         font-size: medium;
+        
     }
 }
-@media screen and (max-width:480px) {
 
-    h1{
-        visibility: hidden;
-    }
-    nav{
-        display: flex;
-        flex-direction: column;
-
-    }
-}
 
