@@ -55,7 +55,7 @@ kategorien.push(new Kategorie("Java-Script",new Bild("JavaScript Image","assets/
 kategorien.push(new Kategorie("Noch eine Kategorie",new Bild("JavaScript Image","assets/img/javascript.png")));
 
 
-tutorials.push(new Tutorial("Node.js Schnelleinstieg","JavaScript","Ein Tutorial über den Schnelleinstieg in Node.js","2:30","2023-04-27","/tutorial.html","",new Bild("NodeJS Image","assets/img/nodejs.svg")));
+tutorials.push(new Tutorial("Node.js Schnelleinstieg","JavaScript","Ein Tutorial über den Schnelleinstieg in Node.js","2:30","2023-04-27","http://127.0.0.1:5500/v0/tutorial.html","",new Bild("NodeJS Image","assets/img/nodejs.svg")));
 tutorials.push(new Tutorial("HTML-5 Grundlagen","HTML5","Alle wichtigen HTML-5 Elemente","1:20","2023-04-23","","",new Bild("HTML Image","assets/img/html.svg")));
 tutorials[0].fuegeKategorieHinzu(kategorien[2]);
 tutorials[1].fuegeKategorieHinzu(kategorien[0]);

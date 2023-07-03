@@ -7,10 +7,15 @@
     flex-shrink: 1;
 
 }
-#tutorialListPage{
+.tutorialListPage{
     display: flex;
     flex-direction: row;
 
+}
+#tutorialListSearch{
+    flex-grow: 4;
+    flex-basis: 200px;
+    flex-shrink: 1;
 }
 #orderedList{
     display: flex;
@@ -18,13 +23,7 @@
     flex-wrap: wrap;
     
 }
-#orderedList  {
-    
-    display: flex;
-    flex-wrap: wrap;
 
-
-}
 #orderedList a{
     
     margin: 10px;
@@ -44,7 +43,7 @@
     
 }
 @media screen and (max-width:768px) {
-    #tutorialListPage{
+    .tutorialListPage{
         
         flex-direction: column;
         
