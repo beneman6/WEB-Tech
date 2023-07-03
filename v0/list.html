@@ -1,70 +1,115 @@
 <!DOCTYPE html>
-<html lang=de>
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-width, initial-scale=1.0">
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-width, initial-scale=1.0"
+    />
 
     <title>WEB Tutorials</title>
-    <link rel="icon" type="images/x-icon" href="./assets/img/html.svg">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="./assets/css/form.css">
-    <link rel="stylesheet" href="./assets/css/tile.css">
+    <link rel="icon" type="images/x-icon" href="./assets/img/html.svg" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/form.css" />
+    <link rel="stylesheet" href="./assets/css/tile.css" />
+  </head>
 
-
-</head>
-
-<body>
+  <body>
     <header>
-        <img class="mainLogo" width="50" height="50" src="assets/img/html.svg" alt="Webseiten Logo">
-        <h1>Web Entwicklung</h1>
-
+      <img
+        class="mainLogo"
+        width="50"
+        height="50"
+        src="assets/img/html.svg"
+        alt="Webseiten Logo"
+      />
+      <h1>Web Entwicklung</h1>
     </header>
     <main>
-
-        <nav><div class = "navElements"><a href="list.html">Liste der Kategorien</a> | <a href="tutorials.html">Tutorials der Kategorie X</a> | <a
-                href="tutorial.html"> Detaills zum Tutorial Y</a> | <a href="form.html">Erstellen eines neuen
-                Tutorials</a></div></nav>
-        <div class = "tutorialListPage">
+      <nav>
+        <div class="navElements">
+          <a href="list.html">Liste der Kategorien</a> |
+          <a href="tutorials.html">Tutorials der Kategorie X</a> |
+          <a href="tutorial.html"> Detaills zum Tutorial Y</a> |
+          <a href="form.html">Erstellen eines neuen Tutorials</a>
+        </div>
+      </nav>
+      <div class="tutorialListPage">
         <article id="tutorialList">
-            <article id="orderedList">
-                <a href="tutorials.html"> <span class="listText"> Web Entwicklung</span> <span class = listImage><img width="50" height="50" alt="HTML Symbol"
-                    src="assets/img/html.svg"> </span>
+          <article id="orderedList">
+            <a href="tutorials.html">
+              <span class="listText"> Web Entwicklung</span>
+              <span class="listImage"
+                ><img
+                  width="50"
+                  height="50"
+                  alt="HTML Symbol"
+                  src="assets/img/html.svg"
+                />
+              </span>
+            </a>
+            <a href="tutorials.html">
+              <span class="listText"> CSS</span>
+              <span class="listImage">
+                <img
+                  width="50"
+                  height="50"
+                  alt="CSS Symbol"
+                  src="assets/img/css.svg"
+                />
+              </span>
+            </a>
 
-                </a>
-                <a href="tutorials.html"> <span class="listText"> CSS</span> <span class = listImage> <img width="50" height="50" alt="CSS Symbol"
-                            src="assets/img/css.svg"> </span> </a>
+            <a href="tutorials.html">
+              <span class="listText"> Java Script</span>
+              <span class="listImage">
+                <img
+                  width="50"
+                  height="50"
+                  alt="javascript Symbol"
+                  src="assets/img/javascript.png" /></span
+            ></a>
 
-                
-                <a href="tutorials.html"> <span class="listText"> Java Script</span> <span class = listImage> <img width="50" height="50" alt="javascript Symbol"
-                            src="assets/img/javascript.png"></span></a>
-
-                
-                <a href=""> <span class="listText"> Noch eine Kategorie </span> <span class = listImage> <img  width="50" height="50" alt="javascript Symbol"
-                    src="assets/img/javascript.png"></span></a>
-                </article>
-            <form action="http://localhost:8844" method="get">
-
-                <fieldset>
-                    <p> <label for="titel">Titel: </label><input id="titel" name="search" required minlength="4"
-                            maxlength="20" placeholder="tutorial" pattern="[A-Z]\w*">
-                    <input type="submit" value="Suchen"></p>
-                </fieldset>
-            </form>
+            <a href="">
+              <span class="listText"> Noch eine Kategorie </span>
+              <span class="listImage">
+                <img
+                  width="50"
+                  height="50"
+                  alt="javascript Symbol"
+                  src="assets/img/javascript.png" /></span
+            ></a>
+          </article>
+          <form action="http://localhost:8844" method="get">
+            <fieldset>
+              <p>
+                <label for="titel">Titel: </label
+                ><input
+                  id="titel"
+                  name="search"
+                  required
+                  minlength="4"
+                  maxlength="20"
+                  placeholder="tutorial"
+                  pattern="[A-Z]\w*"
+                />
+                <input type="submit" value="Suchen" />
+              </p>
+            </fieldset>
+          </form>
         </article>
-        
-        
+
         <article class="newTutorials">
-            <h2 class="linear1">Neue Tutorials</h2>
-            <ul>
-                <li>Node.js Schnelleinstieg 27.04.2023 - Dauer: 2:30h</li>
-                <li>HTML-5 Grundlagen 23.04.2023 - Dauer: 1:20h</li>
-            </ul>
-        </article></div>
+          <h2 class="linear1">Neue Tutorials</h2>
+          <ul>
+            <li>Node.js Schnelleinstieg 27.04.2023 - Dauer: 2:30h</li>
+            <li>HTML-5 Grundlagen 23.04.2023 - Dauer: 1:20h</li>
+          </ul>
+        </article>
+      </div>
     </main>
     <footer>@ by WebTech.inc</footer>
-    <script src="./assets/js/script.js" ></script>
+    <script src="./assets/js/script.js"></script>
     <script src="./assets/js/burger.js"></script>
-</body>
-
+  </body>
 </html>

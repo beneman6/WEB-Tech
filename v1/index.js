@@ -1,34 +1,36 @@
 const http = require("http");
-const persistance = require ("./models/persistence");
+const persistance = require("./models/persistence");
 const url = require("url");
 
 const server = http.createServer();
-server.on("request",function(request,response){
-    let method = request.method;
-    //console.log(request.url);
-    const querryParams = url.parse(request.url, true).query;
-    //console.log(querryParams.search);
-    let rueckgabe = persistance.tutorials.filter(element => element.name.toUpperCase().includes(querryParams.search.toUpperCase()));
-    response.writeHead(200,{"content-type": "text/html; charset=utf-8"});
-    
-    
-    response.end(createSearchResults(querryParams,rueckgabe));
+server.on("request", function (request, response) {
+  let method = request.method;
+  //console.log(request.url);
+  const querryParams = url.parse(request.url, true).query;
+  //console.log(querryParams.search);
+  let rueckgabe = persistance.tutorials.filter((element) =>
+    element.name.toUpperCase().includes(querryParams.search.toUpperCase())
+  );
+  response.writeHead(200, { "content-type": "text/html; charset=utf-8" });
 
+  response.end(createSearchResults(querryParams, rueckgabe));
 });
-server.listen(8844,function(){
-    console.log("Der server lauscht auf dem Port 8844");
+server.listen(8844, function () {
+  console.log("Der server lauscht auf dem Port 8844");
 });
 
-let createSearchResults = function(querryParams,rueckgabe){
-    let alleTutorials = "";
-    for(let i = 0; i<rueckgabe.length; i++){
-        alleTutorials += `<li><a href="${rueckgabe[i].url}">${rueckgabe[i].name}</a>    ${rueckgabe[i].datum.toLocaleDateString('de-DE')}</li>`;
-    }
-    if(alleTutorials == ""){
-        alleTutorials = "Keine Tutorials gefunden!";
-    }
+let createSearchResults = function (querryParams, rueckgabe) {
+  let alleTutorials = "";
+  for (let i = 0; i < rueckgabe.length; i++) {
+    alleTutorials += `<li><a href="${rueckgabe[i].url}">${
+      rueckgabe[i].name
+    }</a>    ${rueckgabe[i].datum.toLocaleDateString("de-DE")}</li>`;
+  }
+  if (alleTutorials == "") {
+    alleTutorials = "Keine Tutorials gefunden!";
+  }
 
-    const html = `<!DOCTYPE html>
+  const html = `<!DOCTYPE html>
     <html lang=de>
     
     <head>
@@ -77,6 +79,6 @@ let createSearchResults = function(querryParams,rueckgabe){
         </div>
     </body>
     
-    </html>`
-    return html;
-}
+    </html>`;
+  return html;
+};
