@@ -4,12 +4,13 @@ const app = express();
 
 const router = require("./routes/routes.js");
 const persistence = require("./models/persistence.js");
+const { urlencoded } = require("body-parser");
 app.set("view engine", "ejs");
 app.set("views",path.join(__dirname,"./views"));
 
 
 //app.use(express.urlencoded({extended:false})) bereitet das einlsen der Body Daten vor, auf die dann mit request.body.name zugegriffen werden kann.
-
+app.use(urlencoded({extended:false}));
 app.use(express.static(path.join(__dirname,"./public")));
 //Nur nicht-statische Anfragen werden weitergeleitet!
 // das "/" ist standartmäßig gesetzt

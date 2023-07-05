@@ -16,7 +16,6 @@
     <%- include("includes/header.ejs") %>
     <main>
       <%- include("includes/nav.ejs") %>
-      <% console.log(tutorial.name); %>
       <h2><%= tutorial.name %></h2>
       <div class="tutorialDetails">
         <article id="nodeJSTutorialVideo">
@@ -27,48 +26,16 @@
               <figcaption><%= tutorial.bild.name %></figcaption>
             </figure>
           </div>
-          <div class="videoClass">
-            <p>
-              <video src="vid/Was ist Node.js.mp4" width="500" controls>
-                Ihr Browser unterstützt dieses Format nicht
-              </video>
-            </p>
+          <% if(tutorial.url === ""){ %>
+            <%- tutorial.embedCode %>
+          <% }else{ %>
+            <a href="<%= tutorial.url %>">Link zu dem Text Tutorial</a>
 
-            <table>
-              <tbody>
-                <tr>
-                  <th>Kapitel</th>
-                  <th>Kurzbeschreibung</th>
-                  <th>Dauer</th>
-                </tr>
-                <tr>
-                  <td>Einleitung</td>
-                  <td>Eine kurze Einleitung zu Node.js</td>
-                  <td>1:30 Min.</td>
-                </tr>
-                <tr>
-                  <td>Bestandtteile</td>
-                  <td>
-                    Die auflistung der Bestandtteile von Node.js durch den
-                    Vortragenden
-                  </td>
-                  <td>2 Min.</td>
-                </tr>
-                <tr>
-                  <td>Outro</td>
-                  <td>Das Outro</td>
-                  <td>1:15 Min.</td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <td colspan="2"></td>
-                <td>4:45 Min</td>
-              </tfoot>
-            </table>
-          </div>
+          <% } %>
         </article>
         <%- include("includes/zusatz.ejs")%>
-      </div>
+        </div>
+          
     </main>
 
     <%- include ("includes/footer.ejs") %>
