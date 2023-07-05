@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-width, initial-scale=1.0"
+    />
+
+    <title>WEB Tutorials</title>
+    <link rel="icon" type="images/x-icon" href="img/html.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/grid.css" />
+  </head>
+
+  <body>
+    <header>
+      <img
+        class="mainLogo"
+        width="50"
+        height="50"
+        src="img/html.svg"
+        alt="Webseiten Logo"
+      />
+      <h1>Web Entwicklung</h1>
+    </header>
+    <nav>
+      <div class="navElements">
+        <a href="list.html">Liste der Kategorien</a> |
+        <a href="tutorials.html">Tutorials der Kategorie Web-Entwickling</a> |
+        <a href="tutorial.html"> Detaills zum Tutorial Y</a> |
+        <a href="form.html">Erstellen eines neuen Tutorials</a>
+      </div>
+    </nav>
+    <main>
+      <div id="formular">
+        <h2>Erstellen eines neuen Tutorials</h2>
+        <form
+          method="post"
+          action="https://labs.inf.fh-dortmund.de/tutorialService/testCreateTutorial.php"
+        >
+          <fieldset>
+            <legend>Daten</legend>
+            <p>
+              <label for="titel">Titel</label>
+              <span class="inputSpan">
+                <input
+                  placeholder="Titel mit min. 4 Zeichen und Großbuchstaben"
+                  name="name"
+                  id="titel"
+                  required
+                  minlength="4"
+                  maxlength="20"
+                  pattern="[A-Z][a-z]*"
+              /></span>
+            </p>
+            <p>
+              Sprache
+
+              <select name="language" id="sprache">
+                <option value="-" id="keine">-</option>
+                <option value="de" id="deutsch">Deutsch</option>
+                <option value="en" id="englisch">Englisch</option>
+                <option value="es" id="spanisch">Spanisch</option>
+                <option value="fr" id="französisch">Französisch</option>
+              </select>
+            </p>
+
+            <p>
+              <label for="kategorien">Kategorie(n)</label>
+              <input
+                type="text"
+                id="kategorien"
+                placeholder="Kategorien getrennt durch Kommta"
+                name="categories"
+                pattern="\w+([,] \w+)*"
+              />
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Zusammenfassung</legend>
+            <p>
+              <label for="beschreibung">Beschreibung</label>
+              <textarea
+                id="beschreibung"
+                placeholder="Beschreibungstext"
+                name="description"
+                minlength="40"
+                cols="60"
+                rows="4"
+              ></textarea>
+            </p>
+            <p>
+              <label for="dauer">Dauer</label>
+              <input
+                id="dauer"
+                required
+                name="duration"
+                type="time"
+                min="00:00"
+                max="15:59"
+              />
+            </p>
+            <p>
+              <label for="veröffentlichung">Veröffentlichung (Datum)</label>
+              <input id="veröffentlichung" name="date" type="date" required />
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Inhalt</legend>
+
+            <p>
+              <label for="inhalt"> Inhalt</label>
+              <input
+                type="radio"
+                value="text"
+                name="type"
+                required
+                id="text"
+              /><label for="text"> Text</label>
+              <input
+                type="radio"
+                value="video"
+                name="type"
+                required
+                id="video"
+              />
+              <label for="video"> Video</label>
+            </p>
+            <p>
+              <input
+                required
+                name="content"
+                placeholder="Der Inhalt des Tutorials"
+                id="inhalt"
+              />
+            </p>
+
+            <p><input type="submit" /></p>
+          </fieldset>
+        </form>
+      </div>
+      <article class="newTutorials">
+        <h2>Neue Tutorials</h2>
+        <ul>
+          <li>Node.js Schnelleinstieg 27.04.2023 - Dauer: 2:30h</li>
+          <li>HTML-5 Grundlagen 23.04.2023 - Dauer: 1:20h</li>
+        </ul>
+      </article>
+    </main>
+    <footer>@ by WebTech.inc</footer>
+    <script src="js/form.js"></script>
+    <script src="js/burger.js"></script>
+  </body>
+</html>

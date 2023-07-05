@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-width, initial-scale=1.0"
+    />
+    <title>WEB Tutorials</title>
+    <link rel="icon" type="images/x-icon" href="img/html.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/flexbox.css" />
+  </head>
+
+  <body>
+    <header>
+      <img
+        class="mainLogo"
+        width="50"
+        height="50"
+        src="img/html.svg"
+        alt="Webseiten Logo"
+      />
+      <h1>Web Entwicklung</h1>
+    </header>
+    <main>
+      <nav>
+        <div class="navElements">
+          <a href="list.html">Liste der Kategorien</a> |
+          <a href="tutorials.html">Tutorials der Kategorie Web-Entwickling</a> |
+          <a href="tutorial.html"> Detaills zum Tutorial Y</a> |
+          <a href="form.html">Erstellen eines neuen Tutorials</a>
+        </div>
+      </nav>
+
+      <h2>Node.js Tutorial</h2>
+      <div class="tutorialDetails">
+        <article id="nodeJSTutorialVideo">
+          <div class="tutorialHead">
+            <p calss="tutorialInfos">Datum: 27.04.2023 Dauer: 4:45</p>
+            <figure id="nodeJSPic">
+              <img width="50" height="50" src="img/nodejs.svg" />
+              <figcaption>Node.js Logo</figcaption>
+            </figure>
+          </div>
+          <div class="videoClass">
+            <p>
+              <video src="vid/Was ist Node.js.mp4" width="500" controls>
+                Ihr Browser unterstützt dieses Format nicht
+              </video>
+            </p>
+
+            <table>
+              <tbody>
+                <tr>
+                  <th>Kapitel</th>
+                  <th>Kurzbeschreibung</th>
+                  <th>Dauer</th>
+                </tr>
+                <tr>
+                  <td>Einleitung</td>
+                  <td>Eine kurze Einleitung zu Node.js</td>
+                  <td>1:30 Min.</td>
+                </tr>
+                <tr>
+                  <td>Bestandtteile</td>
+                  <td>
+                    Die auflistung der Bestandtteile von Node.js durch den
+                    Vortragenden
+                  </td>
+                  <td>2 Min.</td>
+                </tr>
+                <tr>
+                  <td>Outro</td>
+                  <td>Das Outro</td>
+                  <td>1:15 Min.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <td colspan="2"></td>
+                <td>4:45 Min</td>
+              </tfoot>
+            </table>
+          </div>
+        </article>
+        <article class="newTutorials">
+          <h2>Neue Tutorials</h2>
+          <ul>
+            <li>Node.js Schnelleinstieg 27.04.2023 - Dauer: 2:30h</li>
+            <li>HTML-5 Grundlagen 23.04.2023 - Dauer: 1:20h</li>
+          </ul>
+        </article>
+      </div>
+    </main>
+
+    <footer>@ by WebTech.inc</footer>
+    <script src="js/burger.js"></script>
+  </body>
+</html>

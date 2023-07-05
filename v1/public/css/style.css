@@ -1,0 +1,61 @@
+h1 {
+  background-color: aqua;
+  padding-left: 60px;
+}
+h2 {
+  background-color: azure;
+}
+h2.linear1 {
+  background: linear-gradient(to bottom right, white, orange);
+}
+
+.newTutorials {
+  background-color: peachpuff;
+}
+
+nav a:hover {
+  background-color: cornflowerblue;
+}
+nav a[href] {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+nav {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  padding: 5px;
+  border: 2px solid rgb(101, 165, 230);
+  border-radius: 10px;
+  background-color: rgb(185, 202, 233);
+}
+nav a {
+  display: inline-block;
+  padding: 3px;
+  border: 2px solid dodgerblue;
+  border-radius: 3px;
+  box-shadow: 4px 4px 4px grey;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+footer {
+  position: sticky;
+  text-align: center;
+  bottom: 10px;
+}
+* {
+  font-family: Helvetica;
+}
+.tutorialPics {
+  float: left;
+}
+#nodeJSPic {
+  float: right;
+}
+.mainLogo {
+  float: left;
+}
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: medium;
+  }
+}

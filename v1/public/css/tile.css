@@ -1,0 +1,40 @@
+#tutorialList {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-grow: 4;
+  flex-basis: 200px;
+  flex-shrink: 1;
+}
+.tutorialListPage {
+  display: flex;
+  flex-direction: row;
+}
+#tutorialListSearch {
+  flex-grow: 4;
+  flex-basis: 200px;
+  flex-shrink: 1;
+}
+#orderedList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#orderedList a {
+  margin: 10px;
+  padding: 5px;
+  border-style: solid;
+  border-color: black;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 4px 4px 4px grey;
+}
+@media screen and (max-width: 768px) {
+  .tutorialListPage {
+    flex-direction: column;
+  }
+}
