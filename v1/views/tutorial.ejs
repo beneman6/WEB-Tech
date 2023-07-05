@@ -13,34 +13,18 @@
   </head>
 
   <body>
-    <header>
-      <img
-        class="mainLogo"
-        width="50"
-        height="50"
-        src="img/html.svg"
-        alt="Webseiten Logo"
-      />
-      <h1>Web Entwicklung</h1>
-    </header>
+    <%- include("includes/header.ejs") %>
     <main>
-      <nav>
-        <div class="navElements">
-          <a href="list.html">Liste der Kategorien</a> |
-          <a href="tutorials.html">Tutorials der Kategorie Web-Entwickling</a> |
-          <a href="tutorial.html"> Detaills zum Tutorial Y</a> |
-          <a href="form.html">Erstellen eines neuen Tutorials</a>
-        </div>
-      </nav>
-
-      <h2>Node.js Tutorial</h2>
+      <%- include("includes/nav.ejs") %>
+      <% console.log(tutorial.name); %>
+      <h2><%= tutorial.name %></h2>
       <div class="tutorialDetails">
         <article id="nodeJSTutorialVideo">
           <div class="tutorialHead">
-            <p calss="tutorialInfos">Datum: 27.04.2023 Dauer: 4:45</p>
-            <figure id="nodeJSPic">
-              <img width="50" height="50" src="img/nodejs.svg" />
-              <figcaption>Node.js Logo</figcaption>
+            <p calss="tutorialInfos">Datum: <%= tutorial.datum.toLocaleDateString("de-DE") %> Dauer: <%= persistence.getDauerInStundenUndMinuten(tutorial.dauer) %></p>
+            <figure class="thisTutorialPic">
+              <img width="50" height="50" src="<%= tutorial.bild.url %>" />
+              <figcaption><%= tutorial.bild.name %></figcaption>
             </figure>
           </div>
           <div class="videoClass">
@@ -83,17 +67,11 @@
             </table>
           </div>
         </article>
-        <article class="newTutorials">
-          <h2>Neue Tutorials</h2>
-          <ul>
-            <li>Node.js Schnelleinstieg 27.04.2023 - Dauer: 2:30h</li>
-            <li>HTML-5 Grundlagen 23.04.2023 - Dauer: 1:20h</li>
-          </ul>
-        </article>
+        <%- include("includes/zusatz.ejs")%>
       </div>
     </main>
 
-    <footer>@ by WebTech.inc</footer>
+    <%- include ("includes/footer.ejs") %>
     <script src="js/burger.js"></script>
   </body>
 </html>

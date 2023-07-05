@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-width, initial-scale=1.0"
+    />
+
+    <title>WEB Tutorials</title>
+    <link rel="icon" type="images/x-icon" href="img/html.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/grid.css" />
+  </head>
+
+  <body>
+    <div class="maincontainer">
+      <%- include("includes/header.ejs") %>
+
+      <%- include("includes/nav.ejs") %>
+      <main>
+        <article id="tutorialList">
+          <h2>Tutorials der Kategorie <%= categoryName %></h2>
+          <% let tutorials = persistence.getTutorialsZuKategorie(categoryName); %>
+          <% for(let i = 0; i<tutorials.length; i++){ %>
+            
+          <figure class="tutorialPics">
+            <img width="50" height="50" src="<%= tutorials[i].bild.url; %>" />
+          </figure>
+          <ul>
+            <% let link = "/tutorial?name=" + tutorials[i].name %>%>
+            <li><a href="<%= link %>"><%= tutorials[i].name %></a></li>
+            <li><%= tutorials[i].datum.toLocaleDateString("de-DE") %></li>
+            <li><%= persistence.getDauerInStundenUndMinuten(tutorials[i].dauer) %></li>
+            <li><%= tutorials[i].beschreibung %></li>
+          </ul>
+
+          <% } %>
+
+          
+        <%- include("includes/zusatz.ejs")%>
+      </main>
+      <%- include ("includes/footer.ejs") %>
+    </div>
+    <script src="js/burger.js"></script>
+  </body>
+</html>

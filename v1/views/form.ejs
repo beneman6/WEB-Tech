@@ -15,24 +15,8 @@
   </head>
 
   <body>
-    <header>
-      <img
-        class="mainLogo"
-        width="50"
-        height="50"
-        src="img/html.svg"
-        alt="Webseiten Logo"
-      />
-      <h1>Web Entwicklung</h1>
-    </header>
-    <nav>
-      <div class="navElements">
-        <a href="list.html">Liste der Kategorien</a> |
-        <a href="tutorials.html">Tutorials der Kategorie Web-Entwickling</a> |
-        <a href="tutorial.html"> Detaills zum Tutorial Y</a> |
-        <a href="form.html">Erstellen eines neuen Tutorials</a>
-      </div>
-    </nav>
+    <%- include("includes/header.ejs") %>
+    <%- include("includes/nav.ejs") %>
     <main>
       <div id="formular">
         <h2>Erstellen eines neuen Tutorials</h2>
@@ -141,15 +125,9 @@
           </fieldset>
         </form>
       </div>
-      <article class="newTutorials">
-        <h2>Neue Tutorials</h2>
-        <ul>
-          <li>Node.js Schnelleinstieg 27.04.2023 - Dauer: 2:30h</li>
-          <li>HTML-5 Grundlagen 23.04.2023 - Dauer: 1:20h</li>
-        </ul>
-      </article>
+      <%- include("includes/zusatz.ejs")%>
     </main>
-    <footer>@ by WebTech.inc</footer>
+    <%- include ("includes/footer.ejs") %>
     <script src="js/form.js"></script>
     <script src="js/burger.js"></script>
   </body>

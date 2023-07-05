@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-width, initial-scale=1.0"
+    />
+
+    <title>WEB Tutorials</title>
+    <link rel="icon" type="images/x-icon" href="img/html.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/tile.css" />
+  </head>
+
+  <body>
+    <%- include("includes/header.ejs") %>
+    <main>
+      <%- include("includes/nav.ejs") %>
+      <div class="tutorialListPage">
+        <article id="tutorialList">
+          <article id="orderedList">
+            
+            <% for(let i = 0; i<persistence.kategorien.length; i++){ %>
+              <% let link = "tutorials?category=" + persistence.kategorien[i].name; %>
+              <a href= "<%=link%>" >
+            
+              <span class="listText"> <%= persistence.kategorien[i].name %></span>
+              <span class="listImage"
+                ><img
+                  width="50"
+                  height="50"
+                  alt="<%= persistence.kategorien[i].bild.name %>"
+                  src="<%= persistence.kategorien[i].bild.url %>"
+                />
+              </span>
+            </a>
+            <% } %>
+            
+          </article>
+          <form action="http://localhost:8844" method="get">
+            <fieldset>
+              <p>
+                <label for="titel">Titel: </label
+                ><input
+                  id="titel"
+                  name="search"
+                  required
+                  minlength="4"
+                  maxlength="20"
+                  placeholder="tutorial"
+                  pattern="[A-Z]\w*"
+                />
+                <input type="submit" value="Suchen" />
+              </p>
+            </fieldset>
+          </form>
+        </article>
+
+        <%- include("includes/zusatz.ejs")%>
+      </div>
+    </main>
+    <%- include ("includes/footer.ejs") %>
+    <script src="js/script.js"></script>
+    <script src="js/burger.js"></script>
+  </body>
+</html>

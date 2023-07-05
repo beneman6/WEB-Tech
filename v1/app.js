@@ -3,6 +3,7 @@ const path = require("path");
 const app = express();
 
 const router = require("./routes/routes.js");
+const persistence = require("./models/persistence.js");
 app.set("view engine", "ejs");
 app.set("views",path.join(__dirname,"./views"));
 

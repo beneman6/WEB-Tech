@@ -52,22 +52,22 @@ let tutorials = new Array();
 kategorien.push(
   new Kategorie(
     "Web-Entwicklung",
-    new Bild("HTML Image", "assets/img/html.svg")
+    new Bild("HTML Image", "img/html.svg")
   )
 );
 kategorien.push(
-  new Kategorie("CSS", new Bild("CSS Image", "assets/img/css.svg"))
+  new Kategorie("CSS", new Bild("CSS Image", "img/css.svg"))
 );
 kategorien.push(
   new Kategorie(
     "Java-Script",
-    new Bild("JavaScript Image", "assets/img/javascript.png")
+    new Bild("JavaScript Image", "img/javascript.png")
   )
 );
 kategorien.push(
   new Kategorie(
     "Noch eine Kategorie",
-    new Bild("JavaScript Image", "assets/img/javascript.png")
+    new Bild("JavaScript Image", "img/javascript.png")
   )
 );
 
@@ -78,9 +78,9 @@ tutorials.push(
     "Ein Tutorial über den Schnelleinstieg in Node.js",
     "2:30",
     "2023-04-27",
-    "http://127.0.0.1:5500/v0/tutorial.html",
     "",
-    new Bild("NodeJS Image", "assets/img/nodejs.svg")
+    "",
+    new Bild("NodeJS Image", "img/nodejs.svg")
   )
 );
 tutorials.push(
@@ -92,7 +92,7 @@ tutorials.push(
     "2023-04-23",
     "",
     "",
-    new Bild("HTML Image", "assets/img/html.svg")
+    new Bild("HTML Image", "img/html.svg")
   )
 );
 tutorials[0].fuegeKategorieHinzu(kategorien[2]);
@@ -107,9 +107,10 @@ kategorien.sort(function (x, y) {
 
 function getTutorialsZuKategorie(kategorieName) {
   return tutorials.filter((element) =>
-    element.kategorienListe.find((element) => element.name == kategorieName)
+    element.kategorienListe.find((element) => element.name.toUpperCase() == kategorieName.toUpperCase())
   );
 }
+
 
 module.exports = {
   tutorials: tutorials,
