@@ -1,3 +1,5 @@
+const fs = require("fs");
+
 function Bild(name, url) {
   this.name = name;
   this.url = url;
@@ -154,10 +156,12 @@ function createNewTutorial(
   datum,
   content,
   type,
-  kategorie
+  kategorie,
+  bild
 ) {
   let tutorial;
-  
+  /* fs.writeFileSync(`img/${name + "bild"}`,bild); */
+  bild.mv();
   if (type === "text") {
     tutorial = (
       new Tutorial(
