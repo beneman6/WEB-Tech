@@ -1,5 +1,3 @@
-const fs = require("fs");
-
 function Bild(name, url) {
   this.name = name;
   this.url = url;
@@ -52,14 +50,9 @@ let kategorien = new Array();
 let tutorials = new Array();
 
 kategorien.push(
-  new Kategorie(
-    "Web-Entwicklung",
-    new Bild("HTML Image", "img/html.svg")
-  )
+  new Kategorie("Web-Entwicklung", new Bild("HTML Image", "img/html.svg"))
 );
-kategorien.push(
-  new Kategorie("CSS", new Bild("CSS Image", "img/css.svg"))
-);
+kategorien.push(new Kategorie("CSS", new Bild("CSS Image", "img/css.svg")));
 kategorien.push(
   new Kategorie(
     "Java-Script",
@@ -81,7 +74,46 @@ tutorials.push(
     "2:30",
     "2023-04-27",
     "",
-    "",
+    `<div class="videoClass">
+    <p>
+      <video src="vid/Was ist Node.js.mp4" width="500" controls>
+        Ihr Browser unterstützt dieses Format nicht
+      </video>
+    </p>
+
+    <table>
+      <tbody>
+        <tr>
+          <th>Kapitel</th>
+          <th>Kurzbeschreibung</th>
+          <th>Dauer</th>
+        </tr>
+        <tr>
+          <td>Einleitung</td>
+          <td>Eine kurze Einleitung zu Node.js</td>
+          <td>1:30 Min.</td>
+        </tr>
+        <tr>
+          <td>Bestandtteile</td>
+          <td>
+            Die auflistung der Bestandtteile von Node.js durch den
+            Vortragenden
+          </td>
+          <td>2 Min.</td>
+        </tr>
+        <tr>
+          <td>Outro</td>
+          <td>Das Outro</td>
+          <td>1:15 Min.</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <td colspan="2"></td>
+        <td>4:45 Min</td>
+      </tfoot>
+    </table>
+    </div>
+    `,
     new Bild("NodeJS Image", "img/nodejs.svg")
   )
 );
@@ -92,7 +124,7 @@ tutorials.push(
     "Alle wichtigen HTML-5 Elemente",
     "1:20",
     "2023-04-23",
-    "",
+    "https://wiki.selfhtml.org/wiki/HTML/Tutorials/Einstieg",
     "",
     new Bild("HTML Image", "img/html.svg")
   )
@@ -109,14 +141,105 @@ kategorien.sort(function (x, y) {
 
 function getTutorialsZuKategorie(kategorieName) {
   return tutorials.filter((element) =>
-    element.kategorienListe.find((element) => element.name.toUpperCase() == kategorieName.toUpperCase())
+    element.kategorienListe.find(
+      (element) => element.name.toUpperCase() == kategorieName.toUpperCase()
+    )
   );
 }
+function createNewTutorial(
+  name,
+  sprache,
+  beschreibung,
+  dauer,
+  datum,
+  content,
+  type,
+  kategorie
+) {
+  let tutorial;
+  
+  if (type === "text") {
+    tutorial = (
+      new Tutorial(
+        name,
+        sprache,
+        beschreibung,
+        dauer,
+        datum,
+        content,
+        "",
+        new Bild("","")
+      )
+    );
+  } else {
+    tutorial = (
+      new Tutorial(
+        name,
+        sprache,
+        beschreibung,
+        dauer,
+        datum,
+        "",
+        `<div class="videoClass">
+    <p>
+      <video src="${content}" width="500" controls>
+        Ihr Browser unterstützt dieses Format nicht
+      </video>
+    </p>
 
+    <table>
+      <tbody>
+        <tr>
+          <th>Kapitel</th>
+          <th>Kurzbeschreibung</th>
+          <th>Dauer</th>
+        </tr>
+        <tr>
+          <td>Einleitung</td>
+          <td>Eine kurze Einleitung zu Node.js</td>
+          <td>1:30 Min.</td>
+        </tr>
+        <tr>
+          <td>Bestandtteile</td>
+          <td>
+            Die auflistung der Bestandtteile von Node.js durch den
+            Vortragenden
+          </td>
+          <td>2 Min.</td>
+        </tr>
+        <tr>
+          <td>Outro</td>
+          <td>Das Outro</td>
+          <td>1:15 Min.</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <td colspan="2"></td>
+        <td>4:45 Min</td>
+      </tfoot>
+    </table>
+    </div>
+    `,
+        new Bild("","")
+      )
+    );
+  }
+  if (getTutorialsZuKategorie(kategorie).length == 0) {
+    let neueKategorie = new Kategorie(kategorie, new Bild("",""));
+    kategorien.push(neueKategorie);
+    tutorial.fuegeKategorieHinzu(neueKategorie);
+  }else{
+    tutorial.fuegeKategorieHinzu(kategorien.find(element => element.name == kategorie));
+  }
+  
+  tutorials.push(tutorial);
+
+}
 
 module.exports = {
   tutorials: tutorials,
   kategorien: kategorien,
   getDauerInStundenUndMinuten: getDauerInStundenUndMinuten,
   getTutorialsZuKategorie: getTutorialsZuKategorie,
+  createNewTutorial: createNewTutorial,
 };
