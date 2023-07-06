@@ -48,7 +48,7 @@ router.get("/form", function (req, res) {
 router.post("/form", function (req, res) {
   // [TODO]
   // Implementieren: Hinzufügen eines neuen Tutorials, danach Weiterleitung nach "/"
-  persistence.createNewTutorial(req.body.name,req.body.language,req.body.description,req.body.duration,req.body.date,req.body.content,req.body.type,req.body.categories);
+  persistence.createNewTutorial(req.body.name,req.body.language,req.body.description,req.body.duration,req.body.date,req.body.content,req.body.type,req.body.categories,req.body.picture);
   
   res.redirect("/");
 });
