@@ -62,7 +62,9 @@ tutorials.push(new Tutorial("Node.js Schnelleinstieg","JavaScript","Ein Tutorial
 tutorials.push(new Tutorial("HTML-5 Grundlagen","HTML5","Alle wichtigen HTML-5 Elemente","1:20","2023-04-23","","",new Bild("HTML Image","assets/img/html.svg")));
 tutorials[0].fuegeKategorieHinzu(kategorien[2]);
 tutorials[1].fuegeKategorieHinzu(kategorien[0]);
-tutorials[0].fuegeKapitelHinzu(new Kapitel("Einleitung","Eine kurze Einleitung zu NodeJS","1:30"))
+tutorials[0].fuegeKapitelHinzu(new Kapitel("Einleitung","Eine kurze Einleitung zu NodeJS","1:30"));
+tutorials[0].fuegeKapitelHinzu(new Kapitel("Zweites Kapitel","Noch ein Kapitel","2:30"));
+
 
 
 kategorien.sort(function(x,y){
@@ -82,8 +84,9 @@ for(let i = 0;i<kategorien.length;i++){
     for(let k = 0; k<tutorial.length; k++){
         console.log(`Kategorie: ${kategorien[i].name}
         Bild: ${kategorien[i].bild.name}
-        ${tutorial[k].name} (${tutorial[k].sprache})  ${tutorial[k].datum.toString()}
+        ${tutorial[k].name} (${tutorial[k].sprache})  ${tutorial[k].datum.toLocaleDateString("de-DE")}
         ${tutorial[k].beschreibung}
+        ${getDauerInStundenUndMinuten(tutorial[k].dauer)}
         ${tutorial[k].embedCode} bzw ${tutorial[k].url}`);
         for(let j = 0; j<tutorial[k].kapitelListe.length; j++){
             console.log(`${tutorial[k].kapitelListe[j].dauer}  ${tutorial[k].kapitelListe[j].name}    ${tutorial[k].kapitelListe[j].beschreibung}`);
